@@ -1,7 +1,7 @@
 import { html } from 'lit';
 import { customElement, state } from 'lit/decorators.js';
 import { View } from '../../views/view';
-import 'multiselect-combo-box/multiselect-combo-box.js';
+import './expression-builder-view';
 
 @customElement('grocery-view')
 export class GroceryView extends View {
@@ -9,14 +9,7 @@ export class GroceryView extends View {
 
   render() {
     return html`<div>
-      <img style="width: 200px;" src="images/empty-plant.png" />
-      <h2>This place intentionally left empty</h2>
-      <multiselect-combo-box
-        .items=${this.items}
-        id="basic"
-        label="Element"
-        placeholder="Select one or more"
-      ></multiselect-combo-box>
+      <expression-builder-view style="width: 50rem, height: 50rem"> </expression-builder-view>
     </div>`;
   }
 
